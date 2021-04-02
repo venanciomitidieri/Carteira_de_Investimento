@@ -1,0 +1,13 @@
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\bin\Debug\netcoreapp3.1\Carteira de Investimento.exe
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\bin\Debug\netcoreapp3.1\Carteira de Investimento.deps.json
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\bin\Debug\netcoreapp3.1\Carteira de Investimento.runtimeconfig.json
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\bin\Debug\netcoreapp3.1\Carteira de Investimento.runtimeconfig.dev.json
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\bin\Debug\netcoreapp3.1\Carteira de Investimento.dll
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\bin\Debug\netcoreapp3.1\Carteira de Investimento.pdb
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\obj\Debug\netcoreapp3.1\Carteira de Investimento.AssemblyInfoInputs.cache
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\obj\Debug\netcoreapp3.1\Carteira de Investimento.AssemblyInfo.cs
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\obj\Debug\netcoreapp3.1\Carteira de Investimento.csproj.CoreCompileInputs.cache
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\obj\Debug\netcoreapp3.1\Carteira de Investimento.dll
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\obj\Debug\netcoreapp3.1\Carteira de Investimento.pdb
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\obj\Debug\netcoreapp3.1\Carteira de Investimento.genruntimeconfig.cache
+C:\Users\PC\Carteira de Investimento\Carteira de Investimento\obj\Debug\netcoreapp3.1\Carteira de Investimento.csprojAssemblyReference.cache
