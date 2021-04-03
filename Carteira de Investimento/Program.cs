@@ -1,5 +1,4 @@
 ﻿using System;
-//using GerenciaCarteiraDeInvestimento;
 
 namespace CarteiradeInvestimentos
 {
@@ -7,7 +6,7 @@ namespace CarteiradeInvestimentos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Menu de Aplicação:\n\n1 - Adiconar um novo ativo na Carteira \n" +
+            Console.Write("Menu de Aplicação:\n\n1 - Adiconar um novo ativo na Carteira \n" +
                 "2 - Visualizar a lista de ativos investidos \n" +
                 "3 - Informar a venda de um ativo \n" +
                 "4 - Visualizar um resumo do valor total investido\n" +
@@ -18,7 +17,7 @@ namespace CarteiradeInvestimentos
 
             if (opcao == "1")
             {
-                Console.WriteLine("Entrando... Adicionar um novo ativo na Carteira");
+                Console.WriteLine("\nEntrando... Adicionar um novo ativo na Carteira");
                 CarteiraDeInvestimento opcao_1 = new CarteiraDeInvestimento();
                 opcao_1.adicionaNovoAtivo();
             }
