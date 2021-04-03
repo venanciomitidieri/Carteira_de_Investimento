@@ -6,7 +6,13 @@ namespace CarteiradeInvestimentos
     {
         public void adicionaNovoAtivo()
         {
-            Console.WriteLine("Adicionando novo ativo na carteira");
+            //Console.WriteLine("Adicionando novo ativo na carteira");
+            Ativo ativo = new Ativo(750, "Empresa x", "Venancio", "CDB");
+
+            Console.WriteLine("Preço do ativo: " + ativo.preco);
+            Console.WriteLine("Identificação do ativo: " + ativo.id);
+            Console.WriteLine("Titular: " + ativo.titular);
+            Console.WriteLine("Tipo do Ativo: " + ativo.tipo);
         }
 
         public void visualizarListaAtivosInvestido()
