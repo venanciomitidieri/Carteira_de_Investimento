@@ -26,11 +26,11 @@ namespace CarteiradeInvestimentos
             Ativo ativo = new Ativo(Double.Parse(preco), id, titular, tipo);
             listaDeAtivos.Add(ativo);
 
-            Console.WriteLine("\nMonstrando novo Ativo adicionado:");
-            Console.WriteLine("Preço do Ativo: " + preco);
-            Console.WriteLine("Identificação do ativo: " + id);
-            Console.WriteLine("Titular do ativo: " + titular);
-            Console.WriteLine("Identificação do ativo: " + tipo);
+            //Console.WriteLine("\nMonstrando novo Ativo adicionado:");
+            //Console.WriteLine("Preço do Ativo: " + preco);
+            //Console.WriteLine("Identificação do ativo: " + id);
+            //Console.WriteLine("Titular do ativo: " + titular);
+            //Console.WriteLine("Identificação do ativo: " + tipo);
         }
 
         public void visualizarListaAtivosInvestido()
