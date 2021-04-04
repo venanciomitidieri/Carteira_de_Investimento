@@ -15,39 +15,44 @@ namespace CarteiradeInvestimentos
 
             string opcao = Console.ReadLine();
 
-            if (opcao == "1")
+            while (Int32.Parse(opcao) <= 5)
             {
-                Console.WriteLine("\nEntrando... Adicionar um novo ativo na Carteira");
-                CarteiraDeInvestimento opcao_1 = new CarteiraDeInvestimento();
-                opcao_1.adicionaNovoAtivo();
-            }
-            else if (opcao == "2")
-            {
-                Console.WriteLine("Entrando...Visualizar lista de ativos investido");
-                CarteiraDeInvestimento opcao_2 = new CarteiraDeInvestimento();
-                opcao_2.visualizarListaAtivosInvestido();
-            }
-            else if (opcao == "3")
-            {
-                Console.WriteLine("Entrando... Informar a venda de um ativo");
-                CarteiraDeInvestimento opcao_3 = new CarteiraDeInvestimento();
-                opcao_3.informarVendaAtivo();
-            }
-            else if (opcao == "4")
-            {
-                Console.WriteLine("Entrando... Visualizar um resumo do valor total investido");
-                CarteiraDeInvestimento opcao_4 = new CarteiraDeInvestimento();
-                opcao_4.visualizarResumoValorInvestido();
-            }
-            else if (opcao == "5")
-            {
-                Console.WriteLine("Saindo da aplicação");
-                CarteiraDeInvestimento opcao_5 = new CarteiraDeInvestimento();
-                opcao_5.saindoDaAplicacao();
-            }
-            else
-            {
-                Console.WriteLine("Opção invalida");
+                switch(Int32.Parse(opcao))
+                { 
+                    case 1:
+                        Console.WriteLine("\nEntrando... Adicionar um novo ativo na Carteira");
+                        CarteiraDeInvestimento opcao_1 = new CarteiraDeInvestimento();
+                        opcao_1.adicionaNovoAtivo();
+                        continue;
+
+                    case 2:
+                        Console.WriteLine("Entrando...Visualizar lista de ativos investido");
+                        CarteiraDeInvestimento opcao_2 = new CarteiraDeInvestimento();
+                        opcao_2.visualizarListaAtivosInvestido();
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Entrando... Informar a venda de um ativo");
+                        CarteiraDeInvestimento opcao_3 = new CarteiraDeInvestimento();
+                        opcao_3.informarVendaAtivo();
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Entrando... Visualizar um resumo do valor total investido");
+                        CarteiraDeInvestimento opcao_4 = new CarteiraDeInvestimento();
+                        opcao_4.visualizarResumoValorInvestido();
+                        break;
+
+                    case 5:
+                        Console.WriteLine("Saindo da aplicação");
+                        CarteiraDeInvestimento opcao_5 = new CarteiraDeInvestimento();
+                        opcao_5.saindoDaAplicacao();
+                        break;
+
+                    case 6:
+                        Console.WriteLine("Opção invalida");
+                        break;
+                }
             }
         }
     }
