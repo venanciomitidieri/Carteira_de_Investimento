@@ -12,16 +12,16 @@ namespace CarteiradeInvestimentos
             //Console.WriteLine("Adicionando novo ativo na carteira");
 
             Console.Write("Código do ativo: ");
-            string codigo = Console.ReadLine();
+            string codigo = Console.ReadLine().ToUpper();
 
-            Console.Write("quantidade de ativo: ");
+            Console.Write("Quantidade de ativo: ");
             string quantidade = Console.ReadLine();
 
             Console.Write("Valor pago por cada unidade do ativo: ");
             string preco = Console.ReadLine();                        
 
             Console.Write("Titular: ");
-            string titular = Console.ReadLine();            
+            string titular = Console.ReadLine().ToUpper();            
 
             Console.Write("Tipo do Ativo: ");
             string tipo = Console.ReadLine();            
@@ -38,9 +38,11 @@ namespace CarteiradeInvestimentos
             foreach (var ativo in listaDeAtivos)
             {
                 cont ++; 
-                Console.WriteLine("Preço: " + ativo.preco +  
-                    ", Titular: " + ativo.titular + 
-                    ", Tipo: " + ativo.tipo + 
+                Console.WriteLine("Código Ativo: " + ativo.codigo +  
+                    ", Preço: " + ativo.preco +
+                    ", Valor total alocado: " + (ativo.quantidade * ativo.preco) +
+                    //", Titular: " + ativo.titular + 
+                    //", Tipo: " + ativo.tipo + 
                     ", Data Compra: " + ativo.data.ToString());
             }
             Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
@@ -54,11 +56,6 @@ namespace CarteiradeInvestimentos
         public void visualizarResumoValorInvestido()
         {
             Console.WriteLine("Visualizando resumo do valor total investido em ativos");
-        }
-
-        public void saindoDaAplicacao()
-        {
-            Console.WriteLine("Você esta saindo da aplicação");
         }
     }
 }
