@@ -27,6 +27,12 @@ namespace CarteiradeInvestimentos
                     case 1:
                         Console.WriteLine("\nEntrando... Adicionar um novo ativo na Carteira");
                         carteiraDeInvestimento.adicionaNovoAtivo();
+                        Console.Write("Deseja voltar ao menu? ");
+                        string voltarMenu = Console.ReadLine();
+                        if (voltarMenu == "1")
+                            continue;
+                        else
+                            sairDoLoop = true;
                         break;
 
                     case 2:

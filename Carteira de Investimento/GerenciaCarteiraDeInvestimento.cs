@@ -11,11 +11,14 @@ namespace CarteiradeInvestimentos
         {
             //Console.WriteLine("Adicionando novo ativo na carteira");
 
-            Console.Write("Preço do ativo: ");
-            string preco = Console.ReadLine();            
+            Console.Write("Código do ativo: ");
+            string codigo = Console.ReadLine();
 
-            Console.Write("Identificação do ativo: ");
-            string id = Console.ReadLine();            
+            Console.Write("quantidade de ativo: ");
+            string quantidade = Console.ReadLine();
+
+            Console.Write("Valor pago por cada unidade do ativo: ");
+            string preco = Console.ReadLine();                        
 
             Console.Write("Titular: ");
             string titular = Console.ReadLine();            
@@ -23,7 +26,7 @@ namespace CarteiradeInvestimentos
             Console.Write("Tipo do Ativo: ");
             string tipo = Console.ReadLine();            
 
-            Ativo ativo = new Ativo(Double.Parse(preco), id, titular, tipo, DateTime.Now);
+            Ativo ativo = new Ativo(codigo, Int32.Parse(quantidade), Double.Parse(preco), titular, tipo, DateTime.Now);
             listaDeAtivos.Add(ativo);
         }
 
@@ -35,8 +38,7 @@ namespace CarteiradeInvestimentos
             foreach (var ativo in listaDeAtivos)
             {
                 cont ++; 
-                Console.WriteLine("Preço: " + ativo.preco + 
-                    ", Id: " + ativo.id + 
+                Console.WriteLine("Preço: " + ativo.preco +  
                     ", Titular: " + ativo.titular + 
                     ", Tipo: " + ativo.tipo + 
                     ", Data Compra: " + ativo.data.ToString());
