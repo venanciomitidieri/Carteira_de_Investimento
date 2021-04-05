@@ -21,25 +21,27 @@ namespace CarteiradeInvestimentos
             string titular = Console.ReadLine();            
 
             Console.Write("Tipo do Ativo: ");
-            string tipo = Console.ReadLine();
+            string tipo = Console.ReadLine();            
 
-            Ativo ativo = new Ativo(Double.Parse(preco), id, titular, tipo);
+            Ativo ativo = new Ativo(Double.Parse(preco), id, titular, tipo, DateTime.Now);
             listaDeAtivos.Add(ativo);
-
-            //Console.WriteLine("\nMonstrando novo Ativo adicionado:");
-            //Console.WriteLine("Preço do Ativo: " + preco);
-            //Console.WriteLine("Identificação do ativo: " + id);
-            //Console.WriteLine("Titular do ativo: " + titular);
-            //Console.WriteLine("Identificação do ativo: " + tipo);
         }
 
         public void visualizarListaAtivosInvestido()
         {
-            //Console.WriteLine("Visualizando lista de ativos investidos");
+            //Console.WriteLine("Visualizando lista de ativos investidos"
+
+            int cont = 0;
             foreach (var ativo in listaDeAtivos)
             {
-                Console.WriteLine(ativo);
+                cont ++; 
+                Console.WriteLine("Preço: " + ativo.preco + 
+                    ", Id: " + ativo.id + 
+                    ", Titular: " + ativo.titular + 
+                    ", Tipo: " + ativo.tipo + 
+                    ", Data Compra: " + ativo.data.ToString());
             }
+            Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
         }
 
         public void informarVendaAtivo()

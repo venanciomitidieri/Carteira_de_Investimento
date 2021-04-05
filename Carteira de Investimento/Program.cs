@@ -8,7 +8,9 @@ namespace CarteiradeInvestimentos
         {
             CarteiraDeInvestimento carteiraDeInvestimento = new CarteiraDeInvestimento();
 
-            while (true)
+            bool sairDoLoop = false;
+
+            while(!sairDoLoop)
             {
                 Console.Write("\nMenu de Aplicação:\n\n1 - Adiconar um novo ativo na Carteira \n" +
                       "2 - Visualizar a lista de ativos investidos \n" +
@@ -43,8 +45,9 @@ namespace CarteiradeInvestimentos
                         break;
 
                     case 5:
-                        Console.WriteLine("Saindo da aplicação");
-                        carteiraDeInvestimento.saindoDaAplicacao();
+                        sairDoLoop = true;
+                        //Console.WriteLine("Saindo da aplicação");
+                        //carteiraDeInvestimento.saindoDaAplicacao();
                         break;
 
                     default:

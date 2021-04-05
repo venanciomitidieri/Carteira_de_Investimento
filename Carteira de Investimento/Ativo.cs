@@ -8,13 +8,16 @@ namespace CarteiradeInvestimentos
         public string id;
         public string titular;
         public string tipo;
+        public DateTime data;
 
-        public Ativo(double preco, string id, string titular, string tipo)
+        //Criando construtor
+        public Ativo(double preco, string id, string titular, string tipo, DateTime data)
         {
             this.preco = preco;
             this.id = id;
             this.titular = titular;
             this.tipo = tipo;
+            this.data = data;
         }
     }
 }
