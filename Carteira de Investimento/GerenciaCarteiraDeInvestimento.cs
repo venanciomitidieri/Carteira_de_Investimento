@@ -38,12 +38,11 @@ namespace CarteiradeInvestimentos
             foreach (var ativo in listaDeAtivos)
             {
                 cont ++; 
-                Console.WriteLine("Código Ativo: " + ativo.codigo +  
-                    ", Preço: " + ativo.preco +
-                    ", Valor total alocado: " + (ativo.quantidade * ativo.preco) +
+                Console.WriteLine($"Código Ativo: {ativo.codigo}, Preço: {ativo.preco}," +
+                    $" Valor total alocado: {ativo.quantidade * ativo.preco}, Data Compra: {ativo.data}");
                     //", Titular: " + ativo.titular + 
                     //", Tipo: " + ativo.tipo + 
-                    ", Data Compra: " + ativo.data.ToString());
+                    //", Data Compra: " + ativo.data.ToString()");
             }
             Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
         }
