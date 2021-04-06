@@ -2,7 +2,7 @@
 
 namespace CarteiradeInvestimentos
 {
-    class Ativo
+    public class Ativo
     {
         public string codigo;
         public int quantidade;
@@ -20,6 +20,10 @@ namespace CarteiradeInvestimentos
             this.titular = titular;
             this.tipo = tipo;
             this.data = data;
+        }
+        public Ativo()
+        {
+
         }
     }
 }

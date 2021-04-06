@@ -37,19 +37,39 @@ namespace CarteiradeInvestimentos
             int cont = 0;
             foreach (var ativo in listaDeAtivos)
             {
-                cont ++; 
+                cont ++;
                 Console.WriteLine($"Código Ativo: {ativo.codigo}, Preço: {ativo.preco}," +
-                    $" Valor total alocado: {ativo.quantidade * ativo.preco}, Data Compra: {ativo.data}");
-                    //", Titular: " + ativo.titular + 
-                    //", Tipo: " + ativo.tipo + 
-                    //", Data Compra: " + ativo.data.ToString()");
+                $" Valor total alocado: {ativo.quantidade * ativo.preco}, Data Compra: {ativo.data}");
+                //", Titular: " + ativo.titular + 
+                //", Tipo: " + ativo.tipo + 
+                //", Data Compra: " + ativo.data.ToString()");
             }
             Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
         }
 
         public void informarVendaAtivo()
         {
-            Console.WriteLine("Informando venda de um ativo");
+            Console.Write("Insira código do Ativo: ");
+            string vendaAtivo = Console.ReadLine().ToUpper();
+            //Console.Write("Unidades Vendidas: ");
+            //Console.ReadLine();
+
+            Ativo ativoRemover = new Ativo();
+
+            foreach (var ativo in listaDeAtivos)
+            {
+                if (vendaAtivo.ToUpper() == ativo.codigo.ToUpper())
+                {
+                    ativoRemover = ativo;
+                    //listaDeAtivos.Remove(ativoRemover);
+                }
+                else
+                {
+                Console.Write("ATENÇÃO, Você não pode vender um ativo que não tenha em sua carteira!!!");
+                }
+            }
+            //Console.Write("ATENÇÃO, Você não pode vender um ativo que não tenha em sua carteira!!!");
+            listaDeAtivos.Remove(ativoRemover);
         }
 
         public void visualizarResumoValorInvestido()
