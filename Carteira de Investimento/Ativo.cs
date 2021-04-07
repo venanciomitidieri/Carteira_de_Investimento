@@ -21,9 +21,5 @@ namespace CarteiradeInvestimentos
             this.tipo = tipo;
             this.data = data;
         }
-        public Ativo()
-        {
-
-        }
     }
 }
