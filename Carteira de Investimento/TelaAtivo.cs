@@ -7,11 +7,11 @@ namespace CarteiraDeInvestimentos
     {
         carteiraDeInvestimentos carteiraDeInvestimento;
 
-        public telaAtivo(carteiraDeInvestimentos carteiraDeInvestimento = null)
+        public telaAtivo(carteiraDeInvestimentos carteiraDeInvestimento)
         {
             this.carteiraDeInvestimento = carteiraDeInvestimento;
         }
-
+        
         public void telaAdicionaNovoAtivo()
         {
             Console.Write("Código do ativo: ");

@@ -38,7 +38,7 @@ namespace CarteiraDeInvestimentos
                 switch (n)
                 {
                     case 1:
-                        Console.WriteLine("\nADICIONAR NOVO ATIVO NA CARTEIRA:\n");
+                        Console.WriteLine("\nADICIONAR NOVO ATIVO NA CARTEIRA:\n");                    
                         carteiraDeInvestimento.adicionaNovoAtivo();
                         saiLoop();
                         break;

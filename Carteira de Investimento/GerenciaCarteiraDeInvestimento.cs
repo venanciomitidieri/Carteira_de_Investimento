@@ -5,7 +5,7 @@ namespace CarteiraDeInvestimentos
 {
     public class carteiraDeInvestimentos
     {
-        public List<Ativo> listaDeAtivos = new List<Ativo>();
+        public List<Ativo> listaDeAtivos = new List<Ativo>();        
 
         public void adicionaNovoAtivo()
         {
