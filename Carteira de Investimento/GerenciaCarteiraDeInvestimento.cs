@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using ativo;
 
-namespace CarteiradeInvestimentos
+namespace CarteiraDeInvestimentos
 {
     public class CarteiraDeInvestimento
     {

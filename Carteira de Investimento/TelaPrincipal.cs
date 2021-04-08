@@ -1,8 +1,9 @@
 ﻿using System;
+using CarteiraDeInvestimentos;
 
-namespace CarteiradeInvestimentos
+namespace telaPincipal
 {
-    class Program
+    class telaPrincipal
     {
         static void Main(string[] args)
         {

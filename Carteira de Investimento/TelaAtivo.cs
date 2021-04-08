@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using ativo;
 
-namespace CarteiradeInvestimentos
+namespace telaAtivo
 {
-    public class TelaAtivo
+    public class telaAtivo
     {
         public void telaAdicionaNovoAtivo()
         {
@@ -37,7 +37,7 @@ namespace CarteiradeInvestimentos
 
         public void telaVisualizarResumoValorInvestido()
         {
-            Console.WriteLine("Estamos dentro de tela visualizar resumo valor investido");
+            Console.WriteLine("Estamos dentro de tela visualizar resumo");
         }
     }
 }

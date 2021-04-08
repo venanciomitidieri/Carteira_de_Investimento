@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace CarteiradeInvestimentos
+
+namespace ativo
 {
     public class Ativo
     {
