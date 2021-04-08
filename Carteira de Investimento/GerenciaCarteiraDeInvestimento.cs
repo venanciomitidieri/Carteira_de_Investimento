@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ativo;
 
 namespace CarteiraDeInvestimentos
 {
-    public class CarteiraDeInvestimento
+    public class carteiraDeInvestimentos
     {
         public List<Ativo> listaDeAtivos = new List<Ativo>();
 

@@ -1,13 +1,12 @@
 ﻿using System;
-using CarteiraDeInvestimentos;
 
-namespace telaPincipal
+namespace CarteiraDeInvestimentos
 {
     class telaPrincipal
     {
         static void Main(string[] args)
         {
-            CarteiraDeInvestimento carteiraDeInvestimento = new CarteiraDeInvestimento();
+            carteiraDeInvestimentos carteiraDeInvestimento = new carteiraDeInvestimentos();
 
             bool Loop = false;
 

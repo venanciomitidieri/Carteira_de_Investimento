@@ -1,10 +1,17 @@
 ﻿using System;
-using ativo;
 
-namespace telaAtivo
+
+namespace CarteiraDeInvestimentos
 {
     public class telaAtivo
     {
+        carteiraDeInvestimentos carteiraDeInvestimento;
+
+        public telaAtivo(carteiraDeInvestimentos carteiraDeInvestimento = null)
+        {
+            this.carteiraDeInvestimento = carteiraDeInvestimento;
+        }
+
         public void telaAdicionaNovoAtivo()
         {
             Console.Write("Código do ativo: ");
