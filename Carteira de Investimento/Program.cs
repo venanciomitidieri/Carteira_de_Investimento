@@ -8,7 +8,7 @@ namespace CarteiradeInvestimentos
         {
             CarteiraDeInvestimento carteiraDeInvestimento = new CarteiraDeInvestimento();
 
-            bool sairDoLoop = false;
+            bool Loop = false;
 
             void saiLoop()
             {
@@ -16,12 +16,12 @@ namespace CarteiradeInvestimentos
                 string voltarMenu = Console.ReadLine();
 
                 if (voltarMenu == "1")
-                    sairDoLoop = false;
+                    Loop = false;
                 else
-                    sairDoLoop = true;
+                    Loop = true;
             }
 
-            while (!sairDoLoop)
+            while (!Loop)
             {
                 Console.Write("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.Write("\nMenu de Aplicação:\n\n1 - Adiconar um novo ativo na Carteira \n" +
@@ -35,7 +35,6 @@ namespace CarteiradeInvestimentos
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 int n = Int32.Parse(opcao);
 
-
                 switch (n)
                 {
                     case 1:
@@ -44,59 +43,26 @@ namespace CarteiradeInvestimentos
                         saiLoop();
                         break;
 
-                        /*Console.Write("\nDeseja voltar ao menu? S[1] N[2]: ");
-                        string voltarMenu = Console.ReadLine();
-
-                        if (voltarMenu == "1")
-                            continue;
-                        else
-                            sairDoLoop = true;
-                        continue;*/
-
                     case 2:
                         Console.WriteLine("\nLISTA DE ATIVOS INVESTIDOS:\n");
                         carteiraDeInvestimento.visualizarListaAtivosInvestido();
                         saiLoop();
-
-                        /*Console.Write("\nDeseja voltar ao menu? S[1] N[2]: ");
-                        voltarMenu = Console.ReadLine();
-
-                        if (voltarMenu == "1")
-                            continue;
-                        else
-                            sairDoLoop = true;*/
                         break;
 
                     case 3:
                         Console.WriteLine("\nINFORMAR VENDA DE UM ATIVO:\n");
                         carteiraDeInvestimento.informarVendaAtivo();
                         saiLoop();
-
-                        /*Console.Write("\nDeseja voltar ao menu? S[1] N[2]: ");
-                        voltarMenu = Console.ReadLine();
-
-                        if (voltarMenu == "1")
-                            continue;
-                        else
-                            sairDoLoop = true;*/
                         break;
 
                     case 4:
                         Console.WriteLine("\nEntrando... Visualizar um resumo do valor total investido");
                         carteiraDeInvestimento.visualizarResumoValorInvestido();
                         saiLoop();
-
-                        /*Console.Write("\nDeseja voltar ao menu? S[1] N[2]: ");
-                        voltarMenu = Console.ReadLine();
-
-                        if (voltarMenu == "1")
-                            continue;
-                        else
-                            sairDoLoop = true;*/
                         break;
 
                     case 5:
-                        sairDoLoop = true;
+                        Loop = true;
                         break;
 
                     default:

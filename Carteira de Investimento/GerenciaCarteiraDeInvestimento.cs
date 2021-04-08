@@ -3,14 +3,12 @@ using System.Collections.Generic;
 
 namespace CarteiradeInvestimentos
 {
-    class CarteiraDeInvestimento
+    public class CarteiraDeInvestimento
     {
-        private List<Ativo> listaDeAtivos = new List<Ativo>();
+        public List<Ativo> listaDeAtivos = new List<Ativo>();
 
         public void adicionaNovoAtivo()
         {
-            //Console.WriteLine("Adicionando novo ativo na carteira");
-
             Console.Write("Código do ativo: ");
             string codigo = Console.ReadLine().ToUpper();
 
@@ -32,8 +30,6 @@ namespace CarteiradeInvestimentos
 
         public void visualizarListaAtivosInvestido()
         {
-            //Console.WriteLine("Visualizando lista de ativos investidos"
-
             int cont = 0;
             foreach (var ativo in listaDeAtivos)
             {
@@ -90,7 +86,18 @@ namespace CarteiradeInvestimentos
 
         public void visualizarResumoValorInvestido()
         {
-            Console.WriteLine("Visualizando resumo do valor total investido em ativos");
+            double acumulador = 0;
+            foreach (var ativo in listaDeAtivos)
+            {
+                double total = (ativo.quantidade * ativo.preco);
+                Console.WriteLine($"Valor alocado em {ativo.codigo}: {total}");
+            }
+
+            foreach (var ativo in listaDeAtivos)
+            {
+                acumulador += (ativo.quantidade * ativo.preco); 
+            }
+            Console.WriteLine($"Valor total carteira: {acumulador}");
         }
     }
 }
