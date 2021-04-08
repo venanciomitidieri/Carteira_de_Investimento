@@ -68,7 +68,7 @@ namespace CarteiradeInvestimentos
                     }
                     else if (Int32.Parse(quantidadeVendido) > ativo.quantidade)
                     {
-                        Console.WriteLine("Quantidade superior ao que você tem na carteira.");
+                        Console.WriteLine("\nQuantidade superior ao que você tem na carteira.");
                         return;
                     }
                 }
@@ -80,7 +80,7 @@ namespace CarteiradeInvestimentos
             }
             else 
             {
-            Console.Write("ATENÇÃO, Você não pode vender um ativo que não tenha em sua carteira!!!");
+            Console.Write("ATENÇÃO, Você não pode vender um ativo que não tenha em sua carteira!!!\n");
             }
         }
 
