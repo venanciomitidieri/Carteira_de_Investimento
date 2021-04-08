@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CarteiraDeInvestimentos
 {
-    public class carteiraDeInvestimentos
+    public class CarteiraDeInvestimento
     {
         public List<Ativo> listaDeAtivos = new List<Ativo>();        
 

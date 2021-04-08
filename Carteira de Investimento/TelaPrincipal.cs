@@ -2,11 +2,11 @@
 
 namespace CarteiraDeInvestimentos
 {
-    class telaPrincipal
+    class TelaPrincipal
     {
         static void Main(string[] args)
         {
-            carteiraDeInvestimentos carteiraDeInvestimento = new carteiraDeInvestimentos();
+            CarteiraDeInvestimento carteiraDeInvestimento = new CarteiraDeInvestimento();
 
             bool Loop = false;
 

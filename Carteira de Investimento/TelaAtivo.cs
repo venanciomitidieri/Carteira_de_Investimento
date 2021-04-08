@@ -3,11 +3,11 @@
 
 namespace CarteiraDeInvestimentos
 {
-    public class telaAtivo
+    public class TelaAtivo
     {
-        carteiraDeInvestimentos carteiraDeInvestimento;
+        CarteiraDeInvestimento carteiraDeInvestimento;
 
-        public telaAtivo(carteiraDeInvestimentos carteiraDeInvestimento)
+        public TelaAtivo(CarteiraDeInvestimento carteiraDeInvestimento)
         {
             this.carteiraDeInvestimento = carteiraDeInvestimento;
         }
