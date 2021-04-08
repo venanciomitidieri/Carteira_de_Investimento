@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using CarteiradeInvestimentos;
 
-namespace CarteiraDeInvestimentos.tests
+
+namespace CarteiraDeInvestimentos.test
 {
     [TestFixture]
     public class CarteiraDeInvestimentoTest
@@ -9,7 +9,7 @@ namespace CarteiraDeInvestimentos.tests
         [Test]
         public void deveSerAdicionadoUmAtivo()
         {
-            CarteiraDeInvestimento carteiradeInvestimentos = new CarteiraDeInvestimento();
+            carteiraDeInvestimentos carteiradeInvestimentos = new carteiraDeInvestimentos();
             carteiradeInvestimentos.adicionaNovoAtivo();
             var resultado = carteiradeInvestimentos.listaDeAtivos;
             Assert.AreEqual(1, resultado.Count);
