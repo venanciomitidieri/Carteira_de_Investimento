@@ -2,14 +2,15 @@
 
 Funções do Menu da aplicação 
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-Menu de Aplicação:
-1 - Adiconar um novo ativo na Carteira
-2 - Visualizar a lista de ativos investidos
-3 - Informar a venda de um ativo
-4 - Visualizar um resumo do valor total investido
-5 - Sair do menu
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+============================================================
+* Menu de Aplicação:
+* 1 - Adiconar um novo ativo na Carteira
+* 2 - Visualizar a lista de ativos investidos
+* 3 - Informar a venda de um ativo
+* 4 - Visualizar um resumo do valor total investido
+* 5 - Sair do menu
+
+============================================================
 
 ## Motivação/Contexto
 
