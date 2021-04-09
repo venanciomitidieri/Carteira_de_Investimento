@@ -19,44 +19,8 @@ namespace CarteiraDeInvestimentos
 
         public void informarVendaAtivo()
         {
-            Console.Write("Insira código do Ativo: ");
-            string vendaAtivo = Console.ReadLine().ToUpper();
 
-            Ativo ativoRemover = null;
-
-            foreach (var ativo in listaDeAtivos)
-            {
-                if (vendaAtivo.ToUpper() == ativo.codigo.ToUpper())
-                {
-                    Console.Write("Unidades Vendidas: ");
-                    string quantidadeVendido = Console.ReadLine();
-
-                    if (Int32.Parse(quantidadeVendido) == ativo.quantidade)
-                    {
-                        ativoRemover = ativo;
-                    }
-                    else if (Int32.Parse(quantidadeVendido) < ativo.quantidade)
-                    {
-                        ativo.quantidade -= Int32.Parse(quantidadeVendido);
-                        return;
-                    }
-                    else if (Int32.Parse(quantidadeVendido) > ativo.quantidade)
-                    {
-                        Console.WriteLine("\nQuantidade superior ao que você tem na carteira.");
-                        return;
-                    }
-                }
-            }
-
-            if (ativoRemover != null)
-            {
-                listaDeAtivos.Remove(ativoRemover);
-            }
-            else 
-            {
-            Console.Write("ATENÇÃO, Você não pode vender um ativo que não tenha em sua carteira!!!\n");
-            }
-        }
+        }    
 
         public void visualizarResumoValorInvestido()
         {
