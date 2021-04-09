@@ -1,72 +1,40 @@
 # Aplicação de Console de Carteira de Investimentos
 
-Primeiramente, obrigado por topar este desafio. Desejamos que seja um processo
-de aprendizado para você.
+Funções do Menu da aplicação 
 
-## Contexto
+============================================================
+* Menu de Aplicação:
+* 1 - Adiconar um novo ativo na Carteira
+* 2 - Visualizar a lista de ativos investidos
+* 3 - Informar a venda de um ativo
+* 4 - Visualizar um resumo do valor total investido
+* 5 - Sair do menu
 
-Ativos financeiros representam a posse de um direito econômico que pode gerar
-lucro ao longo do tempo. Os ativos possuem preço, identificação, titular, tipo (ações, títulos
-do tesouro direto, títulos de CDB, etc...) e podem ser negociados no mercado financeiro
-dependendo da política de cada tipo. Também são conhecidos como "papéis" embora sejam
-títulos digitais intangíveis. Um ativo financeiro pode aumentar de rentabilidade ao longo do
-tempo, por exemplo, quem comprou uma ação da Stone (STNE) na bolsa da Nasdaq no dia
-2 de novembro de 2020, pagou $52,95. Hoje esse mesmo ativo está valendo $69,33
-representando uma rentabilidade de %30,93 para o titular.
-Aplicativos de carteira de investimentos são muito comuns no mercado financeiro
-quando estamos falando do gerenciamento de ativos financeiros. A ideia é ajudar
-investidores a manterem sua lista de ativos comprados, rendimento, valor total por ativo,
-tipo de operação, etc...
+============================================================
 
-## Desafio
+## Motivação/Contexto
 
-Criar uma aplicação de carteira de investimentos que receba entradas e responda
-operações, funcionando pelo terminal de execução da aplicação (uma aplicação de
-console).
+A criação da Carteira de Investimento tem finalidade de fazer com que o usuário tenha controle de seus investimetos de modo simples e rápido. Tendo como princípios poder adicionar um ativo em sua base, visualizar esse ativo, poder informar a venda e atualizar na própria carteira e em seguida poder visualizar o investimento total e alocado em cada ativo. Os dados são mantidos em memória durante a execução do programa.
 
-Você não precisa se preocupar em fazer uma API web service ou persistir os dados
-de entrada informados pelo usuário num banco de dados, os dados podem ser mantidos em
-memória durante a execução do programa. É preciso informar um conjunto de dados que
-pode ser usado para testes.
+## Como funciona
 
-## Essa aplicação deverá suportar as operações descritas abaixo:
+O código utiliza linguagem C# e o framework .NET Core 3.x. Estamos utilizando Nunit para realizar os testes.
 
-* Adicionar um novo ativo na carteira:
-O usuário informa os dados de entrada contendo o código do ativo que foi comprado
-(ex.: STNE, GOOG, PGRM), quantidade de ativos e o valor pago por cada unidade
-do ativo
-* Visualizar a lista de ativos investidos
-Semelhante a um extrato bancário, esse comando deverá exibir uma lista de ativos
-investidos, informando código, preço de cada unidade do ativo, valor total alocado
-no ativo e data de compra.
-* Informar a venda de um ativo
-Esse comando servirá para informar a venda de um ativo. O usuário irá informar o
-código do ativo e quantas unidades ele vendeu. O usuário não deve conseguir
-vender ativos que não existem na carteira.
+# Arquivos, class e seus métodos:
 
-* Visualizar um resumo do valor total investido em todos os ativos e também o
-valor investido em cada ativo
-Comando que deve exibir um resumo da carteira de investimentos do usuário. O
-objetivo é mostrar o valor total da carteira e o valor total alocado por ativos.
+## TelaPrincipal.cs
+Aqui temos a tela principal do programa com a class Main, onde  instanciamos os objetos e class criadas nos outros arquivos do projeto. Temos o Menu principal que aparece para o usuario assim que o programa é inicializado. 
+Dentro do class Main ainda temos o loop que permite o usuário sempre retornar ao menu e em seguida os "case" possiveis com as entradas do usuário.
 
-## Requisitos
+## TelaAtivo.cs
+Dentro do arquivo TelaAtivo encontra-se a class TelaAtivo onde recebemos as entradas do usuários que alimentam nosso objeto e será possivel trabalhar com o mesmo, com os métodos telaAdicionaNovoAtivo(), telaVisualizarListaAtivosInvestido(), telaInformarVendaAtivo() e telaVisualizarResumoValorInvestido()
 
-● Utilização da linguagem de programação C# e o framework .NET Core 3.x
-● Versionamento no Github
-● Implementação de um menu numérico que apresenta todas as operações possíveis
-e também a opção de saída da aplicação. Esse menu será exibido na inicialização
-da aplicação
-● Opção de retornar ao menu em todos os comandos
-O que iremos avaliar:
-● Funcionalidade da aplicação
-● Teste unitários
-● Documentação dos comandos
-● Validação de comandos
+## GerenciaCarteiraDeInvestimento.cs
+É criado a class CarteiraDeInvestimento, onde literalmente é possivel fazer o gerenciamento da carteira de Investimento com os métodos adicionaNovoAtivo(), visualizarListaAtivosInvestido(), informarVendaAtivo(), visualizarResumoValorInvestido().
 
-## Entrega do desafio
+## Ativo.cs
+Criação da class Ativo, onde é declarada todos os atributos do ativo e seu construtor que será possivel criar o objeto que será analisado por TelaAtivo.
 
-A entrega deverá ser feita através de um repositório público criado no Github
-contendo todo o seu código final na branch main. O link pode ser enviado para a pessoa
-que está tocando o seu processo seletivo. O time técnico irá fazer a avaliação e em
-seguida, iremos entrar em contato para dar um feedback em cima do seu desafio.
-Te desejamos boa sorte :)
+## CarteiraDeInvestimentoTest.cs
+Realização dos testes de todos os métodos de que é realizado com o objeto. 
+Utilização o Nunit
