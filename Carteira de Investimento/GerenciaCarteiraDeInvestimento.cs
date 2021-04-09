@@ -41,20 +41,18 @@ namespace CarteiraDeInvestimentos
             }
         }        
 
-        public void visualizarResumoValorInvestido()
+        public (List<string>, double) visualizarResumoValorInvestido()
         {
-            double acumulador = 0;
-            foreach (var ativo in listaDeAtivos)
-            {
-                double total = (ativo.quantidade * ativo.preco);
-                Console.WriteLine($"Valor alocado em {ativo.codigo}: {total}");
-            }
+            List<String> lista = new List<String>();
+            double total = 0;
 
             foreach (var ativo in listaDeAtivos)
             {
-                acumulador += (ativo.quantidade * ativo.preco); 
+                double totalPreco = (ativo.quantidade * ativo.preco);               
+                lista.Add($"Valor alocado em {ativo.codigo}: {totalPreco}");
+                total += totalPreco;
             }
-            Console.WriteLine($"Valor total carteira: {acumulador}");
+            return (lista, total);
         }
     }
 }

@@ -62,14 +62,21 @@ namespace CarteiraDeInvestimentos
             }
             else
             {
-                Console.WriteLine("\nQuantidade superior ao que você tem na carteira.");
+                Console.WriteLine("\nNão é possivel realizar a venda!");
             }
             
         }
 
         public void telaVisualizarResumoValorInvestido()
         {
-            Console.WriteLine("Estamos dentro de tela visualizar resumo");
+            var (lista, total) = carteiraDeInvestimento.visualizarResumoValorInvestido();
+            
+            foreach(var mensagem in lista)
+            {
+                Console.WriteLine(mensagem);
+            }
+
+            Console.WriteLine($"Valor total carteira: {total}");
         }
     }
 }

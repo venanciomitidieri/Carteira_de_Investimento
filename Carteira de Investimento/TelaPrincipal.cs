@@ -58,8 +58,8 @@ namespace CarteiraDeInvestimentos
                         break;
 
                     case 4:
-                        Console.WriteLine("\nEntrando... Visualizar um resumo do valor total investido");
-                        carteiraDeInvestimento.visualizarResumoValorInvestido();
+                        Console.WriteLine("\nVISUALIZAR UM RESUMO DO VALOR TOTAL INVESTIDO\n");
+                        telaAtivo.telaVisualizarResumoValorInvestido();
                         saiLoop();
                         break;
 
