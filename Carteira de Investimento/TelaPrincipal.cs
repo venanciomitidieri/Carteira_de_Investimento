@@ -8,6 +8,8 @@ namespace CarteiraDeInvestimentos
         {
             CarteiraDeInvestimento carteiraDeInvestimento = new CarteiraDeInvestimento();
 
+            TelaAtivo telaAtivo = new TelaAtivo(carteiraDeInvestimento);
+
             bool Loop = false;
 
             void saiLoop()
@@ -38,8 +40,8 @@ namespace CarteiraDeInvestimentos
                 switch (n)
                 {
                     case 1:
-                        Console.WriteLine("\nADICIONAR NOVO ATIVO NA CARTEIRA:\n");                    
-                        carteiraDeInvestimento.adicionaNovoAtivo();
+                        Console.WriteLine("\nADICIONAR NOVO ATIVO NA CARTEIRA:\n");
+                        telaAtivo.telaAdicionaNovoAtivo();
                         saiLoop();
                         break;
 

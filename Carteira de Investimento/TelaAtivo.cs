@@ -30,6 +30,7 @@ namespace CarteiraDeInvestimentos
             string tipo = Console.ReadLine();
 
             Ativo ativo = new Ativo(codigo, Int32.Parse(quantidade), Double.Parse(preco), titular, tipo, DateTime.Now);
+            carteiraDeInvestimento.adicionaNovoAtivo(ativo);
         }
 
         public void telaVisualizarListaAtivosInvestido()

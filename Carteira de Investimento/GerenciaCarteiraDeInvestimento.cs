@@ -7,24 +7,8 @@ namespace CarteiraDeInvestimentos
     {
         public List<Ativo> listaDeAtivos = new List<Ativo>();        
 
-        public void adicionaNovoAtivo()
+        public void adicionaNovoAtivo(Ativo ativo)
         {
-            Console.Write("Código do ativo: ");
-            string codigo = Console.ReadLine().ToUpper();
-
-            Console.Write("Quantidade de ativo: ");
-            string quantidade = Console.ReadLine();
-
-            Console.Write("Valor pago por cada unidade do ativo: ");
-            string preco = Console.ReadLine();                        
-
-            Console.Write("Titular: ");
-            string titular = Console.ReadLine().ToUpper();            
-
-            Console.Write("Tipo do Ativo: ");
-            string tipo = Console.ReadLine();            
-
-            Ativo ativo = new Ativo(codigo, Int32.Parse(quantidade), Double.Parse(preco), titular, tipo, DateTime.Now);
             listaDeAtivos.Add(ativo);
         }
 
