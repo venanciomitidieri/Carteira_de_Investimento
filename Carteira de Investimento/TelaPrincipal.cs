@@ -47,7 +47,7 @@ namespace CarteiraDeInvestimentos
 
                     case 2:
                         Console.WriteLine("\nLISTA DE ATIVOS INVESTIDOS:\n");
-                        carteiraDeInvestimento.visualizarListaAtivosInvestido();
+                        telaAtivo.telaVisualizarListaAtivosInvestido();
                         saiLoop();
                         break;
 

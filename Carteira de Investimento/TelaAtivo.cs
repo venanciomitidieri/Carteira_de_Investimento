@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 namespace CarteiraDeInvestimentos
@@ -35,7 +36,16 @@ namespace CarteiraDeInvestimentos
 
         public void telaVisualizarListaAtivosInvestido()
         {
-            Console.WriteLine("Estamos dentro de tela visualizar lista de ativo investido");
+
+            int cont = 0;
+            foreach (var ativo in carteiraDeInvestimento.listaDeAtivos)
+            {
+                cont++;
+                Console.WriteLine($"Código Ativo: {ativo.codigo}, Preço: {ativo.preco}, Quantidade: {ativo.quantidade}," +
+                $" Valor total alocado: {ativo.quantidade * ativo.preco}, Data Compra: {ativo.data}");
+                // Titular:  {ativo.titular}, Tipo: {ativo.tipo}")
+            }
+            Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
         }
 
         public void telaInformarVendaAtivo()

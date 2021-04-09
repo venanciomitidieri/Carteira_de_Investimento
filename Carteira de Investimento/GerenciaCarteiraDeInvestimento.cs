@@ -12,17 +12,9 @@ namespace CarteiraDeInvestimentos
             listaDeAtivos.Add(ativo);
         }
 
-        public void visualizarListaAtivosInvestido()
+        public List<Ativo> visualizarListaAtivosInvestido()
         {
-            int cont = 0;
-            foreach (var ativo in listaDeAtivos)
-            {
-                cont ++;
-                Console.WriteLine($"Código Ativo: {ativo.codigo}, Preço: {ativo.preco}, Quantidade: {ativo.quantidade}," +
-                $" Valor total alocado: {ativo.quantidade * ativo.preco}, Data Compra: {ativo.data}");
-                // Titular:  {ativo.titular}, Tipo: {ativo.tipo}")
-            }
-            Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
+            return listaDeAtivos;
         }
 
         public void informarVendaAtivo()
