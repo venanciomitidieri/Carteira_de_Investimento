@@ -20,9 +20,7 @@ namespace CarteiraDeInvestimentos
                 cont ++;
                 Console.WriteLine($"Código Ativo: {ativo.codigo}, Preço: {ativo.preco}, Quantidade: {ativo.quantidade}," +
                 $" Valor total alocado: {ativo.quantidade * ativo.preco}, Data Compra: {ativo.data}");
-                //", Titular: " + ativo.titular + 
-                //", Tipo: " + ativo.tipo + 
-                //", Data Compra: " + ativo.data.ToString()");
+                // Titular:  {ativo.titular}, Tipo: {ativo.tipo}")
             }
             Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
         }
