@@ -51,42 +51,20 @@ namespace CarteiraDeInvestimentos
         public void telaInformarVendaAtivo()
         {
             Console.Write("Insira código do Ativo: ");
-            string vendaAtivo = Console.ReadLine().ToUpper();
+            string codigo = Console.ReadLine().ToUpper();
+            Console.Write("Unidades Vendidas: ");
+            string quantidadeString = Console.ReadLine();
+            int quantidade = Int32.Parse(quantidadeString);
 
-            Ativo ativoRemover = null;
-
-            foreach (var ativo in carteiraDeInvestimento.listaDeAtivos)
+            if (carteiraDeInvestimento.verificaQuantidade(codigo, quantidade))
             {
-                if (vendaAtivo.ToUpper() == ativo.codigo.ToUpper())
-                {
-                    Console.Write("Unidades Vendidas: ");
-                    string quantidadeVendido = Console.ReadLine();
-
-                    if (Int32.Parse(quantidadeVendido) == ativo.quantidade)
-                    {
-                        ativoRemover = ativo;
-                    }
-                    else if (Int32.Parse(quantidadeVendido) < ativo.quantidade)
-                    {
-                        ativo.quantidade -= Int32.Parse(quantidadeVendido);
-                        return;
-                    }
-                    else if (Int32.Parse(quantidadeVendido) > ativo.quantidade)
-                    {
-                        Console.WriteLine("\nQuantidade superior ao que você tem na carteira.");
-                        return;
-                    }
-                }
-            }
-
-            if (ativoRemover != null)
-            {
-                carteiraDeInvestimento.listaDeAtivos.Remove(ativoRemover);
+                carteiraDeInvestimento.informarVendaAtivo(codigo, quantidade);
             }
             else
             {
-                Console.Write("ATENÇÃO, Você não pode vender um ativo que não tenha em sua carteira!!!\n");
+                Console.WriteLine("\nQuantidade superior ao que você tem na carteira.");
             }
+            
         }
 
         public void telaVisualizarResumoValorInvestido()

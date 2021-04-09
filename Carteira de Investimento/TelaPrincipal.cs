@@ -53,7 +53,7 @@ namespace CarteiraDeInvestimentos
 
                     case 3:
                         Console.WriteLine("\nINFORMAR VENDA DE UM ATIVO:\n");
-                        carteiraDeInvestimento.informarVendaAtivo();
+                        telaAtivo.telaInformarVendaAtivo();
                         saiLoop();
                         break;
 

@@ -14,7 +14,7 @@ namespace CarteiraDeInvestimentos.tests
             Ativo ativo_test = new Ativo("stone", 20, 10, "Venâncio", "CDB", DateTime.Now);
 
             carteiradeInvestimentos.adicionaNovoAtivo(ativo_test);
-            var resultado = carteiradeInvestimentos.listaDeAtivos;
+            var resultado = carteiradeInvestimentos.visualizarListaAtivosInvestido();
             Assert.AreEqual(1, resultado.Count);
         }
 
@@ -25,7 +25,7 @@ namespace CarteiraDeInvestimentos.tests
             Ativo ativo_test = new Ativo("stone", 20, 10, "Venâncio", "CDB", DateTime.Now);
 
             carteiradeInvestimentos.adicionaNovoAtivo(ativo_test);
-            var resultado = carteiradeInvestimentos.listaDeAtivos.Find(item => item.codigo.Equals("stone"));
+            var resultado = carteiradeInvestimentos.visualizarListaAtivosInvestido().Find(item => item.codigo.Equals("stone"));
             Assert.AreEqual("stone", resultado.codigo);
         }
     }
