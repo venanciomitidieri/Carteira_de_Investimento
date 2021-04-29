@@ -18,28 +18,40 @@ namespace CarteiraDeInvestimentos
             string codigo = Console.ReadLine().ToUpper();
 
             Console.Write("Quantidade de ativo: ");
-            int x;
-            while (!int.TryParse(Console.ReadLine(), out x))
+            int a;
+            while (!int.TryParse(Console.ReadLine(), out a))
             {
                 Console.WriteLine("Insira apenas números inteiros");
                 Console.Write("Quantidade de ativo: ");                
             }
-            int quantidade = x;
+            int quantidade = a;
 
             Console.Write("Valor pago por cada unidade do ativo: ");
-            double z;
-            while (!double.TryParse(Console.ReadLine(), out z))
+            double b;
+            while (!double.TryParse(Console.ReadLine(), out b))
             {
                 Console.WriteLine("Insira apenas números inteiros ou decimais !!!");
                 Console.Write("Valor pago por cada unidade do ativo: ");
             }
-            double preco = z;
+            double preco = b;
 
             Console.Write("Titular: ");
-            string titular = Console.ReadLine().ToUpper();
+            double c;
+            while (double.TryParse(Console.ReadLine(), out c))
+            {
+                Console.WriteLine("Insira apenas LETRAS");
+                Console.Write("Titular: ");
+            }
+            string titular = c.ToString().ToUpper();
 
             Console.Write("Tipo do Ativo: ");
-            string tipo = Console.ReadLine();
+            double d;
+            while (double.TryParse(Console.ReadLine(), out d))
+            {
+                Console.WriteLine("Insira apenas LETRAS");
+                Console.Write("Tipo do Ativo: ");
+            }
+            string tipo = d.ToString().ToUpper();
 
             Ativo ativo = new Ativo(codigo, quantidade, preco, titular, tipo, DateTime.Now);
             carteiraDeInvestimento.adicionaNovoAtivo(ativo);
