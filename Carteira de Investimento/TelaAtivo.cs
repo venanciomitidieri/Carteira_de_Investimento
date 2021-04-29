@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 
 namespace CarteiraDeInvestimentos
@@ -19,10 +18,22 @@ namespace CarteiraDeInvestimentos
             string codigo = Console.ReadLine().ToUpper();
 
             Console.Write("Quantidade de ativo: ");
-            string quantidade = Console.ReadLine();
+            int x;
+            while (!int.TryParse(Console.ReadLine(), out x))
+            {
+                Console.WriteLine("Insira apenas números inteiros");
+                Console.Write("Quantidade de ativo: ");                
+            }
+            int quantidade = x;
 
             Console.Write("Valor pago por cada unidade do ativo: ");
-            string preco = Console.ReadLine();
+            double z;
+            while (!double.TryParse(Console.ReadLine(), out z))
+            {
+                Console.WriteLine("Insira apenas números inteiros ou decimais !!!");
+                Console.Write("Valor pago por cada unidade do ativo: ");
+            }
+            double preco = z;
 
             Console.Write("Titular: ");
             string titular = Console.ReadLine().ToUpper();
@@ -30,7 +41,7 @@ namespace CarteiraDeInvestimentos
             Console.Write("Tipo do Ativo: ");
             string tipo = Console.ReadLine();
 
-            Ativo ativo = new Ativo(codigo, Int32.Parse(quantidade), Double.Parse(preco), titular, tipo, DateTime.Now);
+            Ativo ativo = new Ativo(codigo, quantidade, preco, titular, tipo, DateTime.Now);
             carteiraDeInvestimento.adicionaNovoAtivo(ativo);
         }
 

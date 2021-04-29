@@ -33,11 +33,17 @@ namespace CarteiraDeInvestimentos
                       "5 - Sair do menu \n\n" +
                       "Selecione uma opção: ");
 
-                string opcao = Console.ReadLine();
+                int x;
+                while (!int.TryParse(Console.ReadLine(), out x))
+                {
+                    Console.WriteLine("Insira apenas números inteiros");
+                    Console.Write("Selecione uma opção: ");
+                }
+                int opcao = x;
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                int n = Int32.Parse(opcao);
 
-                switch (n)
+
+                switch (opcao)
                 {
                     case 1:
                         Console.WriteLine("\nADICIONAR NOVO ATIVO NA CARTEIRA:\n");
