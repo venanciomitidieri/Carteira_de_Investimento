@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Carteira de Investimento\Carteira de Investimento.csproj" />
+    <ProjectReference Include="..\Carteira de Investimento\CarteiradeInvestimento.csproj" />
   </ItemGroup>
 
 </Project>

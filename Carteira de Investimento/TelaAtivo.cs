@@ -38,7 +38,7 @@ namespace CarteiraDeInvestimentos
             Console.Write("Titular: ");
             double c;
             while (double.TryParse(Console.ReadLine(), out c))
-            {
+            {                    
                 Console.WriteLine("Insira apenas LETRAS");
                 Console.Write("Titular: ");
             }
@@ -57,7 +57,7 @@ namespace CarteiraDeInvestimentos
             carteiraDeInvestimento.adicionaNovoAtivo(ativo);
         }
 
-        public void telaVisualizarListaAtivosInvestido()
+        public void telaVisualizaListaAtivosInvestido()
         {
 
             int cont = 0;
@@ -66,12 +66,11 @@ namespace CarteiraDeInvestimentos
                 cont++;
                 Console.WriteLine($"Código Ativo: {ativo.codigo}, Preço: {ativo.preco}, Quantidade: {ativo.quantidade}," +
                 $" Valor total alocado: {ativo.quantidade * ativo.preco}, Data Compra: {ativo.data}");
-                // Titular:  {ativo.titular}, Tipo: {ativo.tipo}")
             }
             Console.WriteLine("\nQuantidade de Ativos comprados: " + cont);
         }
 
-        public void telaInformarVendaAtivo()
+        public void telaInformaVendaAtivo()
         {
             Console.Write("Insira código do Ativo: ");
             string codigo = Console.ReadLine().ToUpper();
@@ -79,20 +78,20 @@ namespace CarteiraDeInvestimentos
             string quantidadeString = Console.ReadLine();
             int quantidade = Int32.Parse(quantidadeString);
 
-            if (carteiraDeInvestimento.verificaQuantidade(codigo, quantidade))
+            if (carteiraDeInvestimento.verificaQuantidadeDeAtivosParaVenda(codigo, quantidade))
             {
-                carteiraDeInvestimento.informarVendaAtivo(codigo, quantidade);
+                carteiraDeInvestimento.informaVendaAtivo(codigo, quantidade);
             }
             else
             {
-                Console.WriteLine("\nNão é possivel realizar a venda!");
+                Console.WriteLine("\nNão é possivel realizar a venda! Número insuficiente de Ativos");
             }
             
         }
 
-        public void telaVisualizarResumoValorInvestido()
+        public void telaVisualizaResumoValorInvestido()
         {
-            var (lista, total) = carteiraDeInvestimento.visualizarResumoValorInvestido();
+            var (lista, total) = carteiraDeInvestimento.visualizaResumoValorInvestido();
             
             foreach(var mensagem in lista)
             {

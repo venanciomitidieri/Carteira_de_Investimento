@@ -12,7 +12,6 @@ namespace CarteiraDeInvestimentos
         public string tipo;
         public DateTime data;
 
-        //Criando construtor
         public Ativo(string codigo, int quantidade, double preco, string titular, string tipo, DateTime data)
         {
             this.codigo = codigo;

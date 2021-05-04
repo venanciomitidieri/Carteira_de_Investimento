@@ -7,7 +7,7 @@ namespace CarteiraDeInvestimentos
     {
         public List<Ativo> listaDeAtivos = new List<Ativo>();   
         
-        public bool verificaQuantidade(string codigo, int quantidade)
+        public bool verificaQuantidadeDeAtivosParaVenda(string codigo, int quantidade)
         {
             Ativo ativo = listaDeAtivos.Find(item => item.codigo.Equals(codigo));
             if (ativo == null)
@@ -25,12 +25,12 @@ namespace CarteiraDeInvestimentos
             listaDeAtivos.Add(ativo);
         }
 
-        public List<Ativo> visualizarListaAtivosInvestido()
+        public List<Ativo> visualizaListaAtivosInvestido()
         {
             return listaDeAtivos;
         }
 
-        public void informarVendaAtivo(string codigo, int quantidade)
+        public void informaVendaAtivo(string codigo, int quantidade)
         {
             Ativo ativo = listaDeAtivos.Find(item => item.codigo.Equals(codigo));
             ativo.quantidade -= quantidade;
@@ -41,7 +41,7 @@ namespace CarteiraDeInvestimentos
             }
         }        
 
-        public (List<string>, double) visualizarResumoValorInvestido()
+        public (List<string>, double) visualizaResumoValorInvestido()
         {
             List<String> lista = new List<String>();
             double total = 0;

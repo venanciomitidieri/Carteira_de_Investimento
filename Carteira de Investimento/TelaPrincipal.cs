@@ -53,19 +53,19 @@ namespace CarteiraDeInvestimentos
 
                     case 2:
                         Console.WriteLine("\nLISTA DE ATIVOS INVESTIDOS:\n");
-                        telaAtivo.telaVisualizarListaAtivosInvestido();
+                        telaAtivo.telaVisualizaListaAtivosInvestido();
                         saiLoop();
                         break;
 
                     case 3:
                         Console.WriteLine("\nINFORMAR VENDA DE UM ATIVO:\n");
-                        telaAtivo.telaInformarVendaAtivo();
+                        telaAtivo.telaInformaVendaAtivo();
                         saiLoop();
                         break;
 
                     case 4:
                         Console.WriteLine("\nVISUALIZAR UM RESUMO DO VALOR TOTAL INVESTIDO\n");
-                        telaAtivo.telaVisualizarResumoValorInvestido();
+                        telaAtivo.telaVisualizaResumoValorInvestido();
                         saiLoop();
                         break;
 
