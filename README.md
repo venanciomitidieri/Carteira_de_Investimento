@@ -42,7 +42,7 @@ Utilização o Nunit
 ## Como debugar o projeto?
 
 1. Clone o repositório.
-2. Abra no Microsoft Visual Studio
-3. Faça o debug do codigo (F5)
-4. Digite as entradas
-6. No terminale execute os testes: dotnet test (NUnit)
+2. Execute via terminal
+3. Dê as entradas usando o teclado
+4. Siga o menu
+6. No terminal execute os testes: dotnet test (NUnit)
